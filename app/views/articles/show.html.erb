@@ -2,3 +2,12 @@
 
 <p>Title: <%= @article.title %></p>
 <p>Description: <%= @article.description %></p>
+
+
+<p>
+    <%= link_to "Edit this article", edit_article_path(@article[:id]) %>
+</p>
+
+<p>
+    <%= link_to "Back to Index", articles_path %>
+</p>
