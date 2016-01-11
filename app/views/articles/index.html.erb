@@ -8,7 +8,11 @@
                 <%= link_to "#{t.id}", article_path(t) %>
             </div>
             <div class="col-xs-2">
-                <%= link_to "#{t.title}", article_path(t) %>
+                <%= link_to "#{t.title}", article_path(t) %> </br>
+                <small>
+                    <%= t.user.username if t.user %> </br>
+                    <%= time_ago_in_words(t.created_at) %>
+                </small>
             </div>
             <div class="col-xs-7">
                 <%= truncate(t.description, length: 200) %>
